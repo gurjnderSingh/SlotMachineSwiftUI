@@ -36,8 +36,9 @@ enum Choice: Int, Identifiable {
 }
 struct ContentView: View {
     
-    @State public var numbers = [0, 1, 2]
-    @State public var counter = 0
+    @State private var isWon: Bool = false
+    @State public var numbers: [Int] = [0, 1, 2]
+    @State public var counter: Int = 0
     @State private var showingAlert: Choice?
     
     var body: some View {
@@ -70,14 +71,14 @@ struct ContentView: View {
                 VStack{
                     HStack(alignment: .center, spacing: 40) {
                         Hexagona()
-                            .fill(.white)
+                            .fill(isWon ? .yellow : .white)
                             .frame(width: 100, height: 120)
                             .overlay {
                                 Text("\(numbers[0])")
                                     .font(.largeTitle)
                             }
                         Hexagona()
-                            .fill(.white)
+                            .fill(isWon ? .yellow : .white)
                             .frame(width: 100, height: 120)
                             .overlay {
                                 Text("\(numbers[1])")
@@ -85,7 +86,7 @@ struct ContentView: View {
                             }
                     }
                     Hexagona()
-                        .fill(.white)
+                        .fill(isWon ? .yellow : .white)
                         .frame(width: 100, height: 120)
                         .overlay {
                             Text("\(numbers[2])")
@@ -93,14 +94,14 @@ struct ContentView: View {
                         }
                     HStack(alignment: .center, spacing: 40) {
                         Hexagona()
-                            .fill(.white)
+                            .fill(isWon ? .yellow : .white)
                             .frame(width: 100, height: 120)
                             .overlay {
                                 Text("\(numbers[2])")
                                     .font(.largeTitle)
                             }
                         Hexagona()
-                            .fill(.white)
+                            .fill(isWon ? .yellow : .white)
                             .frame(width: 100, height: 120)
                             .overlay {
                                 Text("\(numbers[1])")
@@ -117,6 +118,7 @@ struct ContentView: View {
                     if self.numbers[0] == self.numbers[1] && self.numbers[1] == self.numbers[2] {
                         self.counter = 0
                         self.showingAlert = .success
+                        self.isWon.toggle()
                     }
                     if counter > 5 {
                         self.counter = 0
@@ -141,7 +143,9 @@ struct ContentView: View {
                 case .failure:
                     return Alert(title: Text("Sorry Try Again"), message: Text("Be Patience"), dismissButton: .cancel())
                 case .success:
-                    return Alert(title: Text("Yahhh! you won"), message: Text("Born with the charm"), dismissButton: .cancel())
+                    return Alert(title: Text("Yahhh! you won"), message: Text("Born with the charm"), dismissButton: .cancel(Text("Ok"), action: {
+                        self.isWon.toggle()
+                    }))
                 }
             }
             
