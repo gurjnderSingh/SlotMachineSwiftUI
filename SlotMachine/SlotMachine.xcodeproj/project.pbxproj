@@ -11,7 +11,6 @@
 		187F438B2AEBDDE9006B87AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F438A2AEBDDE9006B87AE /* ContentView.swift */; };
 		187F438D2AEBDDEB006B87AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187F438C2AEBDDEB006B87AE /* Assets.xcassets */; };
 		187F43902AEBDDEB006B87AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187F438F2AEBDDEB006B87AE /* Preview Assets.xcassets */; };
-		187F43972AEBDEFE006B87AE /* Hexagonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F43962AEBDEFE006B87AE /* Hexagonal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +19,6 @@
 		187F438A2AEBDDE9006B87AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		187F438C2AEBDDEB006B87AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		187F438F2AEBDDEB006B87AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		187F43962AEBDEFE006B87AE /* Hexagonal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexagonal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +55,6 @@
 				187F438A2AEBDDE9006B87AE /* ContentView.swift */,
 				187F438C2AEBDDEB006B87AE /* Assets.xcassets */,
 				187F438E2AEBDDEB006B87AE /* Preview Content */,
-				187F43962AEBDEFE006B87AE /* Hexagonal.swift */,
 			);
 			path = SlotMachine;
 			sourceTree = "<group>";
@@ -140,7 +137,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187F43972AEBDEFE006B87AE /* Hexagonal.swift in Sources */,
 				187F438B2AEBDDE9006B87AE /* ContentView.swift in Sources */,
 				187F43892AEBDDE9006B87AE /* SlotMachineApp.swift in Sources */,
 			);
